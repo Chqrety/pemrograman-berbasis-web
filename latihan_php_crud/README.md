@@ -1,67 +1,56 @@
-# Alfi's Daily Journal - Latihan Bootstrap 5 & PHP
+# latihan_php_crud
 
-Proyek landing page ini dibuat untuk latihan penerapan komponen **Bootstrap 5** dan **PHP**. Halaman memuat navigasi, hero, galeri artikel dinamis dari database, galeri foto, dan footer, serta fitur theme toggle (light/dark). Semua layout dan styling mengandalkan Bootstrap, dengan sedikit CSS _inline_ untuk penyesuaian, termasuk tampilan gambar artikel rasio **3:4** (image cover) seperti Tailwind namun menggunakan Bootstrap 5.
+## Deskripsi
+
+`latihan_php_crud` adalah aplikasi web sederhana berbasis PHP & MySQL yang mengimplementasikan fitur CRUD (Create, Read, Update, Delete) untuk manajemen artikel, dilengkapi autentikasi (login/logout), dashboard admin, dan upload foto. Proyek ini cocok untuk latihan dasar pengembangan web dinamis.
 
 ## Fitur Utama
 
-- **Navbar responsif** dengan theme toggle (Light/Dark) dan sticky-top.
-- **Hero section** dengan tagline dan gambar banner.
-- **Daftar artikel dinamis**: Data artikel diambil dari database MySQL menggunakan PHP, ditampilkan dalam grid Bootstrap Card.
-- **Gambar artikel rasio 3:4**: Gambar artikel otomatis tampil proporsional (cover) dengan rasio 3:4 menggunakan Bootstrap 5 (`ratio-3x4` dan `object-fit: cover`).
-- **Galeri foto** dengan Bootstrap Carousel (5 gambar).
-- **Footer** dengan ikon media sosial (Bootstrap Icons).
-- **Theme toggle**: Pilihan tema terang/gelap disimpan di localStorage.
+- **Autentikasi**: Login dan logout user, validasi akses admin.
+- **Dashboard**: Tampilan dashboard setelah login.
+- **Manajemen Artikel**: CRUD artikel (tambah, edit, hapus, lihat).
+- **Upload Foto**: Upload gambar ke server (tersimpan di folder `img/`).
+- **Koneksi Database**: Setting koneksi di `koneksi.php`.
+- **File SQL**: `webdailyjournal.sql` untuk struktur & data awal database.
 
-## Teknologi & Dependensi
-
-- **HTML5**
-- **PHP** (untuk dynamic content & koneksi database)
-- **MySQL** (tabel `article` untuk data artikel)
-- **[Bootstrap 5.3.8](https://getbootstrap.com/) (CDN)**
-- **[Bootstrap Icons 1.13.1](https://icons.getbootstrap.com/) (CDN)**
-- **JavaScript (vanilla)** untuk theme toggle & jam/tanggal.
-
-## Struktur Folder & File
+## Struktur Folder & File Penting
 
 ```
-.
-├── img/
-│   ├── logo.png
-│   ├── banner.jpg
-│   ├── workspace.png
-│   ├── mahasiswa.png
-│   ├── foodcourt.png
-│   ├── pojokbaca.png
-│   ├── lapangan.png
-│   ├── carousel_1.png
-│   ├── carousel_2.png
-│   ├── carousel_3.png
-│   ├── carousel_4.png
-│   └── carousel_5.png
-├── index.php
-├── koneksi.php
-├── article.php
-├── dashboard.php
-├── login.php
-├── login_capstone.php
-├── logout.php
-├── README.md
+latihan_php_crud/
+├── admin.php            # Halaman admin utama
+├── article.php          # Manajemen artikel (CRUD)
+├── dashboard.php        # Dashboard setelah login
+├── index.php            # Halaman utama/login
+├── koneksi.php          # Koneksi ke database
+├── login.php            # Proses login
+├── login_capstone.php   # Alternatif login
+├── logout.php           # Logout user
+├── upload_foto.php      # Upload foto ke server
+├── img/                 # Folder penyimpanan gambar
+├── webdailyjournal.sql  # File SQL database
+└── README.md            # Dokumentasi proyek
 ```
 
-## Cara Menjalankan
+## Cara Instalasi & Menjalankan
 
-- Pastikan struktur file seperti di atas.
-- Pastikan sudah ada database MySQL dengan tabel `article` dan gambar-gambar pada folder `img/`.
-- Jalankan server lokal (misal XAMPP) dan buka `index.php` di browser.
-- Theme dapat diubah lewat ikon matahari/bulan di navbar kanan atas.
-- Koneksi internet diperlukan untuk CDN Bootstrap & Icons.
+1. **Import Database**: Import file `webdailyjournal.sql` ke MySQL (bisa via phpMyAdmin).
+2. **Konfigurasi Koneksi**: Edit `koneksi.php` sesuai pengaturan database lokal Anda (user, password, dbname).
+3. **Pastikan Folder img/**: Folder `img/` harus ada dan memiliki izin tulis agar upload foto berhasil.
+4. **Jalankan Server**: Gunakan XAMPP/LAMP/MAMP, akses `index.php` via browser.
 
----
+## Penggunaan
 
-**Catatan:**
+- Login menggunakan akun yang sudah terdaftar (atau tambahkan user via database).
+- Setelah login, akses dashboard dan fitur CRUD artikel.
+- Upload gambar pada form yang tersedia.
 
-- Semua gambar harus ada di folder `img/`.
-- Tabel `article` di database harus berisi kolom: `judul`, `isi`, `gambar`, `tanggal`.
-- Pilihan tema akan tetap tersimpan setelah reload halaman.
-- Gambar artikel otomatis crop rasio 3:4 (cover) dengan Bootstrap 5.
-- Proyek ini hanya untuk latihan dan demonstrasi penggunaan Bootstrap 5 & PHP.
+## Troubleshooting
+
+- **Gagal upload gambar**: Pastikan folder `img/` writable.
+- **Tidak bisa login**: Cek data user di database.
+- **Koneksi gagal**: Pastikan setting di `koneksi.php` benar dan MySQL aktif.
+
+## Catatan
+
+- Proyek ini untuk latihan/demonstrasi, bukan untuk produksi.
+- Koneksi Bootstrap & Icons via CDN, pastikan ada internet.

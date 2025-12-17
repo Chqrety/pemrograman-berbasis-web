@@ -1,6 +1,8 @@
-# Alfi's Daily Journal - Latihan Bootstrap 5
+# latihan_php2
 
-Proyek landing page statis ini dibuat untuk latihan penerapan komponen **Bootstrap 5**. Halaman memuat navigasi, hero, galeri artikel, galeri foto, dan footer, serta fitur theme toggle (light/dark). Semua layout dan styling mengandalkan Bootstrap, hanya sedikit CSS _inline_ untuk penyesuaian.
+## Deskripsi
+
+`latihan_php2` adalah landing page statis untuk latihan Bootstrap 5. Proyek ini menampilkan struktur website modern dengan navigasi, hero, galeri artikel, galeri foto, dan footer, serta fitur theme toggle (light/dark) yang responsif.
 
 ## Fitur Utama
 
@@ -21,7 +23,7 @@ Proyek landing page statis ini dibuat untuk latihan penerapan komponen **Bootstr
 ## Struktur Folder & File
 
 ```
-.
+latihan_php2/
 ├── img/
 │   ├── logo.png
 │   ├── banner.jpg
@@ -41,15 +43,16 @@ Proyek landing page statis ini dibuat untuk latihan penerapan komponen **Bootstr
 
 ## Cara Menjalankan
 
-- Pastikan struktur file seperti di atas.
-- Buka `index.html` di browser.
-- Theme dapat diubah lewat ikon matahari/bulan di navbar kanan atas.
-- Koneksi internet diperlukan untuk CDN Bootstrap & Icons.
+1. Pastikan struktur file dan gambar sudah sesuai di folder `img/`.
+2. Buka `index.html` di browser.
+3. Theme dapat diubah lewat ikon matahari/bulan di navbar kanan atas.
+4. Koneksi internet diperlukan untuk CDN Bootstrap & Icons.
 
----
+## Troubleshooting
 
-**Catatan:**
+- **Gambar tidak tampil**: Pastikan semua file gambar ada di folder `img/`.
+- **Theme tidak berubah**: Pastikan browser mendukung localStorage dan JavaScript aktif.
 
-- Semua gambar harus ada di folder `img/`.
-- Pilihan tema akan tetap tersimpan setelah reload halaman.
+## Catatan
+
 - Proyek ini hanya untuk latihan dan demonstrasi penggunaan Bootstrap 5.
