@@ -86,9 +86,6 @@ include "koneksi.php";
             <a class="nav-link" href="#profile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#profile">Profile</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="login.php" target="_blank">Login</a>
           </li>
           <li class="nav-item">
@@ -176,9 +173,9 @@ include "koneksi.php";
           <div class="carousel-item">
             <img src="img/carousel_3.png" class="d-block w-100" alt="carousel 3" />
           </div>
-          < class="carousel-item">
+          <div class="carousel-item">
             <img src="img/carousel_4.png" class="d-block w-100" alt="carousel 4" />
-          </>
+          </div>
           <div class="carousel-item">
             <img src="img/carousel_5.png" class="d-block w-100" alt="carousel 5" />
           </div>
